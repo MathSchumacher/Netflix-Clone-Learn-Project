@@ -1,0 +1,140 @@
+:root {
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*elementos base*/
+body {
+    background: var(--preta);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    padding-left: 60px; /* Account for the sidebar width */
+}
+
+/* Sidebar styling */
+.sidebar {
+    height: 100%;
+    width: 60px; /* Adjust width as needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center icons vertically */
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #AAA;
+    padding: 20px 0;
+    display: block;
+    text-align: center;
+    font-size: 1.5rem; /* Increase font size for larger icons */
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100%-60px);/* Subtract sidebar width */
+    padding: 0 20px;
+    margin: 0 auto;
+    margin-left: 60px; /* Add sidebar width */
+}
+
+header .logo {
+    color: var(--vermelho);
+    font-family: 'Arial Black', 'Times New Roman', Times, serif;
+    font-size: 320%;
+    margin-right: auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    font-size: 120%;
+    margin: 0 10px;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+/*filme principal*/
+.filme-principal {
+    font-size: 120%;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50) 100%), url(img/The_Boys_Logo.jpg);
+    height: 400%;
+    background-size: contain; /* Ajusta para cobrir toda a área disponível */
+    background-position: left; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-color: black; /* Define a cor de fundo como preto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse */
+    padding: 20px; /* Adiciona um espaçamento interno */
+    word-wrap: break-word; /* Quebra as palavras longas para não ultrapassar a borda */
+    text-overflow: ellipsis;
+}
+.filme-principal .descricao{
+    margin-bottom: 2%;
+    margin-top: 1%;
+    max-width: calc(100% - 40px); /* Largura máxima ajustada para a largura do contêiner menos o padding */
+}
+.titulo{
+    margin-top: 15%;
+    font-size: 300%;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    align-items: center;
+}
+.botao{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 1.50% 3.00%;
+    margin-right: 3%;
+    font-size: 100%;
+    margin-bottom: 2.0%;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.botao:hover{
+    background-color: white;
+    color: #141414;
+}
+.botao i{
+    margin-right: 1rem;
+}
+.container{
+    margin-left: 2%;
+}
+.filme-principal .container{
+    width: 80%;
+}
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.carrosel-filmes{
+    margin-top: 1%;
+}
